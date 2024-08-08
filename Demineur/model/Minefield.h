@@ -2,7 +2,6 @@
 #define MINEFIELD_H
 
 #include <vector>
-#include <stdexcept>
 
 class Minefield {
 public:

@@ -1,6 +1,7 @@
 #include "Minefield.h"
 #include <random>
 #include <algorithm>
+#include <iostream>
 
 Minefield::Minefield(int width, int height, int mines)
     : width(width), height(height), mines(mines), gameLost(false),
@@ -86,6 +87,7 @@ void Minefield::generateMines(int firstX, int firstY) {
         if ((x != firstX || y != firstY) && !minefield[x][y]) {
             minefield[x][y] = true;
             ++placedMines;
+            std::cout << " coordonées de la bombe x: " << x << " et y: " << y << "\n";
         }
     }
 }
