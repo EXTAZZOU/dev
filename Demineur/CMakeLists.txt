@@ -13,10 +13,9 @@ add_executable(DemineurConsole
     model/Minefield.cpp model/Minefield.h
     view/ConsoleView.cpp view/ConsoleView.h
     controller/GameController.cpp controller/GameController.h
-    main.cpp
-    view/MainWindow.cpp view/MainWindow.h
     view/MainWindow.h view/MainWindow.cpp view/MainWindow.ui
-    images/mark.png)
+    main.cpp
+    )
 
 target_link_libraries(DemineurConsole PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 

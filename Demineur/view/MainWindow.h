@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QLabel>
-#include "../model/Minefield.h"  // Assurez-vous que le chemin est correct
+#include "../model/Minefield.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,7 +41,7 @@ private:
     void updateButton(int x, int y);
     void revealAll();
     void resetMinefield();
-    void revealAdjacent(int x, int y);  // Déclaration de la fonction revealAdjacent
+    void revealAdjacent(int x, int y);
 };
 
 #endif // MAINWINDOW_H

@@ -4,23 +4,25 @@
 #include <QMouseEvent>
 #include <QDebug>
 
+// Constructeur de MainWindow
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), timeElapsed(0) {
     ui->setupUi(this);
 
-    minefield = new Minefield(9, 9, 10);  // Créer un champ de mines de 9x9 avec 10 mines
+    minefield = new Minefield(9, 9, 10);
 
-    // Configuration du chronomètre
+    // Configuration du label de chronomètre
     timerLabel = new QLabel("Time: 00:00", this);
     timerLabel->setAlignment(Qt::AlignRight | Qt::AlignTop);
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::updateTimer);
-    timer->start(1000);  // Met à jour chaque seconde
+    timer->start(1000);
 
     // Configuration du bouton "Recommencer"
     resetButton = new QPushButton("Recommencer", this);
     connect(resetButton, &QPushButton::clicked, this, &MainWindow::resetGame);
 
+    // Configuration de la grille de boutons
     gridLayout = new QGridLayout(this);
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
@@ -32,20 +34,22 @@ MainWindow::MainWindow(QWidget *parent)
         }
     }
 
-    // Ajouter le timerLabel et le resetButton au layout principal
+    // Configuration du layout principal
     QVBoxLayout *mainLayout = new QVBoxLayout();
     mainLayout->addWidget(timerLabel);
-    mainLayout->addWidget(resetButton, 0, Qt::AlignCenter);  // Centrer le bouton "Recommencer"
+    mainLayout->addWidget(resetButton, 0, Qt::AlignCenter);
     mainLayout->addLayout(gridLayout);
     setCentralWidget(new QWidget());
     centralWidget()->setLayout(mainLayout);
 }
 
+// Destructeur de MainWindow
 MainWindow::~MainWindow() {
     delete ui;
     delete minefield;
 }
 
+// Met à jour le chronomètre
 void MainWindow::updateTimer() {
     timeElapsed++;
     int minutes = timeElapsed / 60;
@@ -55,26 +59,29 @@ void MainWindow::updateTimer() {
                             .arg(seconds, 2, 10, QLatin1Char('0')));
 }
 
+// Réinitialise le jeu
 void MainWindow::resetGame() {
-    timer->stop();  // Arrêter le chronomètre
+    timer->stop();
     timeElapsed = 0;
     timerLabel->setText("Time: 00:00");
-    timer->start(1000);  // Redémarrer le chronomètre
-    resetMinefield();  // Réinitialiser le champ de mines
+    timer->start(1000);
+    resetMinefield();
 }
 
+// Réinitialise le champ de mines
 void MainWindow::resetMinefield() {
     delete minefield;
     minefield = new Minefield(9, 9, 10);
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
             buttons[i][j]->setText("");
-            buttons[i][j]->setStyleSheet("");  // Réinitialiser à l'état par défaut
+            buttons[i][j]->setStyleSheet("");
             buttons[i][j]->setEnabled(true);
         }
     }
 }
 
+// Gère les événements sur les boutons
 bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
@@ -83,24 +90,25 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
                 if (mouseEvent->button() == Qt::RightButton) {
                     if (minefield->isMarked(i, j)) {
                         minefield->unmark(i, j);
-                        buttons[i][j]->setStyleSheet("");  // Réinitialiser à l'état non marqué
+                        buttons[i][j]->setStyleSheet("");
                     } else {
                         minefield->mark(i, j);
-                        buttons[i][j]->setStyleSheet("background-image: url(C:/Users/ilias/Documents/abc/Demineur/images/mark.png);");
+                        buttons[i][j]->setStyleSheet("background-image: url(C:/Users/extaz/Desktop/Demineur/images/mark.png);");
                     }
                     return true;
                 } else if (mouseEvent->button() == Qt::LeftButton) {
                     if (!minefield->isRevealed(i, j)) {
                         minefield->reveal(i, j);
-                        revealAdjacent(i, j);  // Révéler toutes les cases adjacentes
+                        revealAdjacent(i, j);
                         if (minefield->isGameLost()) {
                             revealAll();
-                            timer->stop();  // Arrêter le chronomètre à la fin du jeu
+                            timer->stop();
                             QMessageBox::information(this, "Game Over", "Tu as touché une mine!");
+                            resetGame();
                         } else if (minefield->isGameWon()) {
                             revealAll();
-                            timer->stop();  // Arrêter le chronomètre à la fin du jeu
-                            QMessageBox::information(this, "Bravo", "Vous avez gagner la partie!");
+                            timer->stop();
+                            QMessageBox::information(this, "Bravo", "Vous avez gagné la partie!");
                         }
                     }
                     return true;
@@ -111,12 +119,13 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
     return QMainWindow::eventFilter(watched, event);
 }
 
+// Met à jour l'affichage d'un bouton
 void MainWindow::updateButton(int x, int y) {
     if (minefield->isRevealed(x, y)) {
         buttons[x][y]->setStyleSheet("background-color: lightgray;");
 
         if (minefield->hasMine(x, y)) {
-            buttons[x][y]->setStyleSheet("background-color: lightgray; background-image: url(C:/Users/ilias/Documents/abc/Demineur/images/bomb.png);");
+            buttons[x][y]->setStyleSheet("background-color: lightgray; background-image: url(C:/Users/extaz/Desktop/Demineur/images/bomb.png);");
         } else {
             int neighboringMines = minefield->getNeighboringMines(x, y);
             if (neighboringMines > 0) {
@@ -129,8 +138,8 @@ void MainWindow::updateButton(int x, int y) {
     }
 }
 
+// Révèle toutes les cases adjacentes
 void MainWindow::revealAdjacent(int x, int y) {
-    // Parcours toutes les cases et applique le style de case révélée
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
             if (minefield->isRevealed(i, j)) {
@@ -140,11 +149,12 @@ void MainWindow::revealAdjacent(int x, int y) {
     }
 }
 
+// Révèle toutes les cases après la fin du jeu
 void MainWindow::revealAll() {
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
             if (minefield->hasMine(i, j)) {
-                buttons[i][j]->setStyleSheet("background-color: lightgray; background-image: url(C:/Users/ilias/Documents/abc/Demineur/images/bomb.png);");
+                buttons[i][j]->setStyleSheet("background-color: lightgray; background-image: url(C:/Users/extaz/Desktop/Demineur/images/bomb.png);");
             } else {
                 updateButton(i, j);
             }

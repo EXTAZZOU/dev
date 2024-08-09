@@ -1,19 +1,19 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/ilias/Documents/Demineur",
+	"BUILD_DIR" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/extaz/Desktop/Demineur",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/ilias/Documents/Demineur/CMakeLists.txt",
-		"C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
-		"C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake",
+		"C:/Users/extaz/Desktop/Demineur/CMakeLists.txt",
+		"C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake",
-		"C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake",
+		"C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake",
+		"C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake",
@@ -26,7 +26,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake",
-		"C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake",
+		"C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake",
@@ -259,40 +259,46 @@
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/ilias/Documents/Demineur",
+	"CMAKE_SOURCE_DIR" : "C:/Users/extaz/Desktop/Demineur",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/deps",
+	"DEP_FILE" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "DemineurConsole_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/ilias/Documents/Demineur/controller/GameController.h",
+			"C:/Users/extaz/Desktop/Demineur/controller/GameController.h",
 			"MU",
 			"NPUKSKGWT2/moc_GameController.cpp",
 			null
 		],
 		[
-			"C:/Users/ilias/Documents/Demineur/main.h",
+			"C:/Users/extaz/Desktop/Demineur/main.h",
 			"MU",
 			"EWIEGA46WW/moc_main.cpp",
 			null
 		],
 		[
-			"C:/Users/ilias/Documents/Demineur/model/Minefield.h",
+			"C:/Users/extaz/Desktop/Demineur/model/Minefield.h",
 			"MU",
 			"NLOY5YBGEN/moc_Minefield.cpp",
 			null
 		],
 		[
-			"C:/Users/ilias/Documents/Demineur/view/ConsoleView.h",
+			"C:/Users/extaz/Desktop/Demineur/view/ConsoleView.h",
 			"MU",
 			"OTUN7GXZT4/moc_ConsoleView.cpp",
+			null
+		],
+		[
+			"C:/Users/extaz/Desktop/Demineur/view/MainWindow.h",
+			"MU",
+			"OTUN7GXZT4/moc_MainWindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -327,7 +333,15 @@
 		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
 		"C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include"
 	],
-	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
 	"MOC_OPTIONS" : [],
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
@@ -339,27 +353,28 @@
 		"-c",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/DemineurConsole_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/DemineurConsole_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 16,
+	"PARSE_CACHE_FILE" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/DemineurConsole_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.7.2/mingw_64/./bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.7.2/mingw_64/./bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 7,
-	"SETTINGS_FILE" : "C:/Users/ilias/Documents/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/DemineurConsole_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/extaz/Desktop/Demineur/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/DemineurConsole_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/ilias/Documents/Demineur/controller/GameController.cpp",
+			"C:/Users/extaz/Desktop/Demineur/controller/GameController.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/ilias/Documents/Demineur/main.cpp", "MU", null ],
-		[ "C:/Users/ilias/Documents/Demineur/model/Minefield.cpp", "MU", null ],
-		[ "C:/Users/ilias/Documents/Demineur/view/ConsoleView.cpp", "MU", null ]
+		[ "C:/Users/extaz/Desktop/Demineur/main.cpp", "MU", null ],
+		[ "C:/Users/extaz/Desktop/Demineur/model/Minefield.cpp", "MU", null ],
+		[ "C:/Users/extaz/Desktop/Demineur/view/ConsoleView.cpp", "MU", null ],
+		[ "C:/Users/extaz/Desktop/Demineur/view/MainWindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

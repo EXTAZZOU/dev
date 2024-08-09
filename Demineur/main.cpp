@@ -1,35 +1,10 @@
 #include <QApplication>
-#include <iostream>
-#include "controller/GameController.h"
-#include "model/Minefield.h"
-#include "view/ConsoleView.h"
 #include "view/MainWindow.h"
 
-
-
-
-
+// Fonction principale
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    QApplication a(argc, argv);  // Initialise l'application Qt
+    MainWindow w;  // Crée la fenêtre principale de l'application
+    w.show();  // Affiche la fenêtre principale
+    return a.exec();  // Entre dans la boucle d'événements Qt
 }
-
-// #ifdef WIN32
-// #include <windows.h>
-// int main(int argc, char *argv[]) {
-//     AllocConsole();
-//     freopen("CONOUT$", "w", stdout);
-//     freopen("CONOUT$", "w", stderr);
-// #else
-// int main(int argc, char *argv[]) {
-// #endif
-//     Minefield minefield(9, 9, 10);
-//     ConsoleView view(minefield);
-//     GameController controller(minefield, view);
-
-//     controller.run(std::cin); // Passer std::cin comme flux d'entrée
-
-//     return 0;
-// }
